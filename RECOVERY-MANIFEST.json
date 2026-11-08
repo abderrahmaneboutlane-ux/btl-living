@@ -1,0 +1,620 @@
+{
+  "deployment": "Ubn7SBgSPPqdZiKe5Ek11KpieZKE",
+  "expectedFileCount": 121,
+  "recoveredFileCount": 121,
+  "missing": [],
+  "problems": [],
+  "files": [
+    {
+      "path": "app/admin/(app)/commandes/page.tsx",
+      "bytes": 9700,
+      "sha1": "27cc5dee6c3531f629faba73f0e267f7ef590291"
+    },
+    {
+      "path": "app/admin/(app)/compte/page.tsx",
+      "bytes": 2165,
+      "sha1": "98c0072616d9bd95df0be6459b5265d46f74d23b"
+    },
+    {
+      "path": "app/admin/(app)/newsletter/page.tsx",
+      "bytes": 3106,
+      "sha1": "9b1d4695edfe5d2a0260954ef7e840b3a961027e"
+    },
+    {
+      "path": "app/admin/(app)/produits/page.tsx",
+      "bytes": 18027,
+      "sha1": "e5a68ae00e175d81d7999ab248f3fd196a1341b2"
+    },
+    {
+      "path": "app/admin/(app)/temoignages/page.tsx",
+      "bytes": 5948,
+      "sha1": "850e08dd84f73d16b4edc93a7add59625e17d939"
+    },
+    {
+      "path": "app/admin/(app)/layout.tsx",
+      "bytes": 1457,
+      "sha1": "b0ca466db466f13c93a9378058388ef8d80f2741"
+    },
+    {
+      "path": "app/admin/(app)/page.tsx",
+      "bytes": 8380,
+      "sha1": "5d8f1eff48619f3e1985851f64b98a0149d89ae6"
+    },
+    {
+      "path": "app/admin/login/page.tsx",
+      "bytes": 8209,
+      "sha1": "8d0e0c05c6a85aa24ab318a4ee124bf6292d848e"
+    },
+    {
+      "path": "app/admin/reset-password/page.tsx",
+      "bytes": 5499,
+      "sha1": "b85efe2e14d79cbdbc9cc89b5174b40656b5bce6"
+    },
+    {
+      "path": "app/api/admin/revalidate/route.ts",
+      "bytes": 1349,
+      "sha1": "e64f9ea5ad7a798a462ac528cadd4be9c9fcd2cf"
+    },
+    {
+      "path": "app/api/admin/upload/route.ts",
+      "bytes": 1742,
+      "sha1": "0550e9beeb5e8e379f757488a680041e170fceb7"
+    },
+    {
+      "path": "app/api/newsletter/route.ts",
+      "bytes": 985,
+      "sha1": "d6ff07e62b8d069c9f2d59e88030f35e8a17e450"
+    },
+    {
+      "path": "app/api/order/route.ts",
+      "bytes": 2503,
+      "sha1": "913755841ed79d6a0e814a25952079d1d1d6dd28"
+    },
+    {
+      "path": "app/collections/[category]/page.tsx",
+      "bytes": 5019,
+      "sha1": "ce3935bee46353839295fcdd5a35b79fb7ea722b"
+    },
+    {
+      "path": "app/collections/page.tsx",
+      "bytes": 4712,
+      "sha1": "7b222a7fe9632707fe45724d90f6017fb4183b96"
+    },
+    {
+      "path": "app/commande/page.tsx",
+      "bytes": 830,
+      "sha1": "30ea8e1a8afc24d83bf4dc12d5e69d0da5858b3f"
+    },
+    {
+      "path": "app/panier/page.tsx",
+      "bytes": 802,
+      "sha1": "0ddcedec4c33263cdd30eeb982808288d74fdffb"
+    },
+    {
+      "path": "app/produit/[slug]/page.tsx",
+      "bytes": 9007,
+      "sha1": "f7d7d9f64af87b29381cc27c99ee2ed6915ab1cb"
+    },
+    {
+      "path": "app/globals.css",
+      "bytes": 6883,
+      "sha1": "92871768995cbe43184cac9943e679a941b331d8"
+    },
+    {
+      "path": "app/icon.svg",
+      "bytes": 286,
+      "sha1": "e1e28a2a8c0b0fd8bc7817e1da6bb3fece3fc218"
+    },
+    {
+      "path": "app/layout.tsx",
+      "bytes": 5383,
+      "sha1": "67eaf551253a5a0f51273de6564963b2f2c8a7a2"
+    },
+    {
+      "path": "app/not-found.tsx",
+      "bytes": 1365,
+      "sha1": "1bc1f71b01484a61f47a2564fd287f1a69f05997"
+    },
+    {
+      "path": "app/page.tsx",
+      "bytes": 1463,
+      "sha1": "dfe77db5e0853a74eba2346681b6b00100675c84"
+    },
+    {
+      "path": "app/robots.ts",
+      "bytes": 349,
+      "sha1": "89afb4989a436ee1fc6e5cf722f3d48617014c3b"
+    },
+    {
+      "path": "app/sitemap.ts",
+      "bytes": 1005,
+      "sha1": "b559c4dde3e193744438518426027cffdd7ea05c"
+    },
+    {
+      "path": "brand/GEMINI-PROMPTS.md",
+      "bytes": 6799,
+      "sha1": "f91d5f1fae30974d8e4917672c73631893a04f54"
+    },
+    {
+      "path": "brand/source-hero.jpg",
+      "bytes": 2876561,
+      "sha1": "9746075506ea336cc4b5c48fccd00df220a82f9a"
+    },
+    {
+      "path": "components/admin/Shell.tsx",
+      "bytes": 7224,
+      "sha1": "0eb64a83c2ba64b89a5fab3030b2c29f512a4d79"
+    },
+    {
+      "path": "components/admin/ui.tsx",
+      "bytes": 9239,
+      "sha1": "3eb683f34efb3344770ca01208f7d72bbbe04764"
+    },
+    {
+      "path": "components/AddToCart.tsx",
+      "bytes": 3547,
+      "sha1": "3bcceac15e7550873274918de36718b24e8047b4"
+    },
+    {
+      "path": "components/CartButton.tsx",
+      "bytes": 1197,
+      "sha1": "f579bcdb0227cda8578b42f84395014aa40eec84"
+    },
+    {
+      "path": "components/CartProvider.tsx",
+      "bytes": 2884,
+      "sha1": "12e8abfde04edcd5a99ce0576b4f43d051327f6c"
+    },
+    {
+      "path": "components/CartView.tsx",
+      "bytes": 6080,
+      "sha1": "c2c5b53f88d67c30547ff35b28c6a2db358d5231"
+    },
+    {
+      "path": "components/CheckoutForm.tsx",
+      "bytes": 10229,
+      "sha1": "4d2f47fffea4c7def0e8eb3b137a1c4b8a87fe4c"
+    },
+    {
+      "path": "components/Curtain.tsx",
+      "bytes": 584,
+      "sha1": "6a39f77eb3c1cc5b6e36fd3283ce2774209fdc27"
+    },
+    {
+      "path": "components/Faq.tsx",
+      "bytes": 2345,
+      "sha1": "234ca413a242e93da8cfe64bda01f914e4a83fa8"
+    },
+    {
+      "path": "components/Finishes3D.tsx",
+      "bytes": 4384,
+      "sha1": "5a0c5a38bcf6b71757f51151c7f83f08966180e5"
+    },
+    {
+      "path": "components/FloatingWhatsApp.tsx",
+      "bytes": 1276,
+      "sha1": "c23df784ae0d4e5172783b41d1c3e978fc0864ef"
+    },
+    {
+      "path": "components/Header.tsx",
+      "bytes": 6149,
+      "sha1": "446132d65a389f8806b5256b3ca1bf3d0a259c8b"
+    },
+    {
+      "path": "components/Hero.tsx",
+      "bytes": 7933,
+      "sha1": "9c31f11cd3881ebcb40641ce3d3c57dd6223122d"
+    },
+    {
+      "path": "components/HeroCanvas.tsx",
+      "bytes": 4794,
+      "sha1": "769c45f0b187c4fe0851cc461028420683aa68af"
+    },
+    {
+      "path": "components/NewsletterForm.tsx",
+      "bytes": 2181,
+      "sha1": "19446901b6f2450c8141bf9e61afe97b758d5aa6"
+    },
+    {
+      "path": "components/ProductCard.tsx",
+      "bytes": 2055,
+      "sha1": "1fd04f4732a11e5c13adeef2c919c640a8c74cc2"
+    },
+    {
+      "path": "components/ProductGallery.tsx",
+      "bytes": 1754,
+      "sha1": "303341fed9db4467c2420d21a69e9adc6082d1e5"
+    },
+    {
+      "path": "components/Reveal.tsx",
+      "bytes": 631,
+      "sha1": "037ce3d85c2b39b236965ea3b6e3010977591ab6"
+    },
+    {
+      "path": "components/Sections.tsx",
+      "bytes": 24544,
+      "sha1": "e410f87a17fcc399f3f27f4386b5e581b04b5079"
+    },
+    {
+      "path": "components/SmoothScroll.tsx",
+      "bytes": 910,
+      "sha1": "8b1da4a70a7e5bbbeca7d3ef303fb111894d287c"
+    },
+    {
+      "path": "lib/supabase/browser.ts",
+      "bytes": 228,
+      "sha1": "0e26ebd7fb7dfe9cfcf5d17653456c2a7920eddc"
+    },
+    {
+      "path": "lib/supabase/server.ts",
+      "bytes": 662,
+      "sha1": "35e91d75462d3bc44fc92bcbe95710ae344a95a0"
+    },
+    {
+      "path": "lib/cart.ts",
+      "bytes": 1628,
+      "sha1": "c0f31d39bb3dced5af26f33296f1fdb10b61707d"
+    },
+    {
+      "path": "lib/catalog.ts",
+      "bytes": 3297,
+      "sha1": "a2feb3637c4fa562dc0eb6677cff0c1300751f17"
+    },
+    {
+      "path": "lib/faq.ts",
+      "bytes": 1313,
+      "sha1": "6d91b195a091572b9c2e830a477fd0daa2ba0443"
+    },
+    {
+      "path": "lib/products.ts",
+      "bytes": 14794,
+      "sha1": "21008cb719cf3800d92ab93820d7a7c0343948a1"
+    },
+    {
+      "path": "lib/site.ts",
+      "bytes": 665,
+      "sha1": "55ad41b724756bc194f2dd00e1cd4c95a6e056f8"
+    },
+    {
+      "path": "lib/supabase.ts",
+      "bytes": 985,
+      "sha1": "f7e51f80dcb2efbc2976de9943506cb9b5be4789"
+    },
+    {
+      "path": "lib/useReveal.ts",
+      "bytes": 1291,
+      "sha1": "3f5e61720261e514fac0481226be176a9fc35a4b"
+    },
+    {
+      "path": "public/products/buffet-oualidia.jpg",
+      "bytes": 195325,
+      "sha1": "1f2b8883564bc082cae35dd0ead40b827e19b0ce"
+    },
+    {
+      "path": "public/products/buffet-oualidia.webp",
+      "bytes": 121136,
+      "sha1": "d0a7d1b23b8c0e2599ca6ce4fd29cda030d76099"
+    },
+    {
+      "path": "public/products/chaise-medina.jpg",
+      "bytes": 231799,
+      "sha1": "aa75f9d3ab575a38adb8c9beb55f91136588420b"
+    },
+    {
+      "path": "public/products/chaise-medina.webp",
+      "bytes": 160398,
+      "sha1": "42d52b3d50525517653201829a19f8a747564fec"
+    },
+    {
+      "path": "public/products/chevet-habous.jpg",
+      "bytes": 186822,
+      "sha1": "1016fc21dfe6de114a71359bc573e009bbccc44a"
+    },
+    {
+      "path": "public/products/chevet-habous.webp",
+      "bytes": 114460,
+      "sha1": "e2c8fabdf2a06ae454cf2612fe62f1021773d4d5"
+    },
+    {
+      "path": "public/products/chevet-ourika.webp",
+      "bytes": 10396,
+      "sha1": "9c4c80920a5c583956082578f68bf1d23c783519"
+    },
+    {
+      "path": "public/products/coiffeuse-agdal.webp",
+      "bytes": 11572,
+      "sha1": "8d80dcd393975e689ca6f1fd2c73b273a9c75a45"
+    },
+    {
+      "path": "public/products/coiffeuse-gueliz.webp",
+      "bytes": 11294,
+      "sha1": "0f0e5ac3168506e4f177ae61226bb0301d297f26"
+    },
+    {
+      "path": "public/products/coiffeuse-majorelle.jpg",
+      "bytes": 239086,
+      "sha1": "ebf7ef0b123d22e70d6082d1240b3c44736a3a41"
+    },
+    {
+      "path": "public/products/coiffeuse-majorelle.webp",
+      "bytes": 159878,
+      "sha1": "73bac3be9d54edf1bdaea8a06cc11d54c07b78fe"
+    },
+    {
+      "path": "public/products/coiffeuse-menara.webp",
+      "bytes": 11792,
+      "sha1": "3f75dcadaa2d1c672b906deefd21dc2d14edd6ff"
+    },
+    {
+      "path": "public/products/commode-riad.jpg",
+      "bytes": 201508,
+      "sha1": "7d525ed21b3d554da7bb05b4077648bfcea903b2"
+    },
+    {
+      "path": "public/products/commode-riad.webp",
+      "bytes": 131088,
+      "sha1": "d3533b4bb9c02c3a1544aaf62d650df14fb15055"
+    },
+    {
+      "path": "public/products/dressing-mansour.jpg",
+      "bytes": 262985,
+      "sha1": "8b9aae8568a3af455aae0fc3b23fa1e9ce00ad45"
+    },
+    {
+      "path": "public/products/dressing-mansour.webp",
+      "bytes": 176328,
+      "sha1": "696287c1743b099558d3fd72eb8167b4eedcec39"
+    },
+    {
+      "path": "public/products/ensemble-ourika.webp",
+      "bytes": 11316,
+      "sha1": "fdbfe9bd8b72c6f7f09850d4a47c18a55419bd73"
+    },
+    {
+      "path": "public/products/fauteuil-essaouira.jpg",
+      "bytes": 222639,
+      "sha1": "93f26198f43a117be8334539ea3cf6c69ad0b318"
+    },
+    {
+      "path": "public/products/fauteuil-essaouira.webp",
+      "bytes": 145236,
+      "sha1": "1d038dd9c880d17103e4b7d5558f881f596bc235"
+    },
+    {
+      "path": "public/products/lit-bahia.webp",
+      "bytes": 8678,
+      "sha1": "2f793b55e1609e00275a763696128c4e353d8d7c"
+    },
+    {
+      "path": "public/products/lit-ifrane.webp",
+      "bytes": 8478,
+      "sha1": "c355bdfce4ee818ce0cb0ccfbac9d841934274c8"
+    },
+    {
+      "path": "public/products/lit-skoura.webp",
+      "bytes": 8894,
+      "sha1": "748ce6205d6f83cf22b9ff0b09c401fe08ca1019"
+    },
+    {
+      "path": "public/products/meuble-tv-corniche.jpg",
+      "bytes": 184818,
+      "sha1": "d7918c9fb15fb5251d4a65388fef51a677552975"
+    },
+    {
+      "path": "public/products/meuble-tv-corniche.webp",
+      "bytes": 114996,
+      "sha1": "15b96782a9324f272b0ef9c7c713877e5a31246c"
+    },
+    {
+      "path": "public/products/miroir-lune.jpg",
+      "bytes": 203399,
+      "sha1": "3d315dcae385063a62cce3725586b24ca2e4e986"
+    },
+    {
+      "path": "public/products/miroir-lune.webp",
+      "bytes": 125806,
+      "sha1": "2fba123b4bb0e4f8b19e6f3c77284a6f9b567348"
+    },
+    {
+      "path": "public/products/penderie-zellige.jpg",
+      "bytes": 228181,
+      "sha1": "6bcbb67c485411faccae78d86d71c608f91bc039"
+    },
+    {
+      "path": "public/products/penderie-zellige.webp",
+      "bytes": 145202,
+      "sha1": "63245b62c26f46d792eb31fa70ef1e17ad543d53"
+    },
+    {
+      "path": "public/products/table-assilah.jpg",
+      "bytes": 249828,
+      "sha1": "0ba2cc7f140234f3cbdd109c008ca7d851fea246"
+    },
+    {
+      "path": "public/products/table-assilah.webp",
+      "bytes": 180272,
+      "sha1": "9e6b4d46cea9af61c7300d3820eb9271862f21f5"
+    },
+    {
+      "path": "public/products/table-basse-taghazout.jpg",
+      "bytes": 203305,
+      "sha1": "42e602f1720c9daaff27685ad8b5739cb870b4fd"
+    },
+    {
+      "path": "public/products/table-basse-taghazout.webp",
+      "bytes": 134914,
+      "sha1": "371d83024ee6f4fde85d6771d0ee9d44481ef58b"
+    },
+    {
+      "path": "public/og.jpg",
+      "bytes": 154531,
+      "sha1": "5e0a1d0ccb8dda076e815641317667a7e7f4cb0e"
+    },
+    {
+      "path": "public/showroom-A-clean.jpg",
+      "bytes": 184824,
+      "sha1": "041cbb4b3d704364c3744996fbbf15ed6c0d3764"
+    },
+    {
+      "path": "public/showroom-B-film.jpg",
+      "bytes": 188105,
+      "sha1": "95cf83d5ff45deda0c3e10f28db9e9b7275ebc8c"
+    },
+    {
+      "path": "public/showroom-C-strong.jpg",
+      "bytes": 190539,
+      "sha1": "f685f35e42af2a84245ffcb5d85f7206be8d7ffb"
+    },
+    {
+      "path": "public/showroom-mobile.jpg",
+      "bytes": 394332,
+      "sha1": "d01cbdeb5d7eb46afe9b6fdf79d0421c9de6127c"
+    },
+    {
+      "path": "public/showroom-mobile.webp",
+      "bytes": 189466,
+      "sha1": "a65c08405c28f3c558c89daff2669749ecf1855d"
+    },
+    {
+      "path": "public/showroom.jpg",
+      "bytes": 1775300,
+      "sha1": "e190674425ca45c5602630beebb6940d7d7c4253"
+    },
+    {
+      "path": "public/showroom.webp",
+      "bytes": 587666,
+      "sha1": "e7da0b447574feee52bbbc162e47656915d7c59d"
+    },
+    {
+      "path": "scripts/film-variants.mjs",
+      "bytes": 2705,
+      "sha1": "47248074a28c4760a3f769a1a12fe1a4bb227183"
+    },
+    {
+      "path": "scripts/optimize-hero.mjs",
+      "bytes": 2723,
+      "sha1": "07cdc86b492559a3755c60e589f307b4a2189602"
+    },
+    {
+      "path": "scripts/product-images.mjs",
+      "bytes": 2584,
+      "sha1": "1db8fa40e8afcbd477a6eee8f4dbe7443e1d717e"
+    },
+    {
+      "path": "scripts/reset-admin-passwords.mjs",
+      "bytes": 1989,
+      "sha1": "f77965632c913b497d8c7175f2464f037a289866"
+    },
+    {
+      "path": "scripts/seed-admins.mjs",
+      "bytes": 2556,
+      "sha1": "09e6171ce3c12dd4a63da7b3992b581addb2f557"
+    },
+    {
+      "path": "scripts/seed-data.json",
+      "bytes": 12989,
+      "sha1": "f4c52bff49fc5a932a6c90b774e8ffd7a898459c"
+    },
+    {
+      "path": "scripts/seed-supabase.mjs",
+      "bytes": 2701,
+      "sha1": "99ec1315ac36404c602698b813528865ad21179c"
+    },
+    {
+      "path": "scripts/upload-images.mjs",
+      "bytes": 2739,
+      "sha1": "adfbfa0b83d424a0b66df28a9b6e89893d82236b"
+    },
+    {
+      "path": "scripts/wait-admin.mjs",
+      "bytes": 1092,
+      "sha1": "65582d9677167a7462cfedecdc4611cdea5d303e"
+    },
+    {
+      "path": "scripts/wait-for-tables.mjs",
+      "bytes": 1071,
+      "sha1": "5449dec96ce62103904e53a3e795fa8828dea8c1"
+    },
+    {
+      "path": ".env.local.example",
+      "bytes": 636,
+      "sha1": "54198cca626d29c2706cdd6d61bbbc65b01bde6b"
+    },
+    {
+      "path": ".vercelignore",
+      "bytes": 54,
+      "sha1": "1bcd7f497cc08a21b77d9961ed6bc3d8c6381bff"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2943,
+      "sha1": "8ecf11049dace6a5e8eb5f6253267463c2c494b1"
+    },
+    {
+      "path": "SUPABASE.md",
+      "bytes": 2976,
+      "sha1": "791266b69e782eb0c8e102271c4c3038ebaafb76"
+    },
+    {
+      "path": "middleware.ts",
+      "bytes": 1420,
+      "sha1": "7d641de9f97e1f6caf3ad24a90ea9787d83184d9"
+    },
+    {
+      "path": "next-env.d.ts",
+      "bytes": 232,
+      "sha1": "481b3e22daacc5ca310a0f835e241c9532a426a9"
+    },
+    {
+      "path": "next.config.mjs",
+      "bytes": 769,
+      "sha1": "a86de9e945643d933d80c193312f74979db43349"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 115641,
+      "sha1": "9558810935dd06e812812549a43caa902778abe7"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1210,
+      "sha1": "514f4683d464b8bc84c0ec7654fcb490f72ddce5"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "bytes": 80,
+      "sha1": "d41c807e4407865d9bb9fcbbad32b6ed1d87e1b6"
+    },
+    {
+      "path": "tailwind.config.ts",
+      "bytes": 854,
+      "sha1": "6b1936aeabbfc4e1e3a1db89e20f28aadb1fef13"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 561,
+      "sha1": "5343252f5942cb60f553a00c2ff34ec800f17592"
+    },
+    {
+      "path": "tsconfig.tsbuildinfo",
+      "bytes": 333957,
+      "sha1": "2681916640b0a74213765488b5938092dde9b680"
+    },
+    {
+      "path": "supabase/migrations/0001_init.sql",
+      "bytes": 4845,
+      "sha1": "3afcb348b162b083b3ef793a3beab75712003a03"
+    },
+    {
+      "path": "supabase/migrations/0002_admin.sql",
+      "bytes": 4185,
+      "sha1": "0e8c4a13d09b2acc401ca3a0d270925209c3b44c"
+    }
+  ],
+  "notes": [
+    "Recovered from the deployment Source viewer using its Copy and Download File controls and authenticated file-content API responses.",
+    "All image files were recovered from their original base64 file content. Recorded Vercel image SHA-1 fingerprints were compared where available.",
+    "Live database contents and deployment environment secrets are not part of this source export.",
+    "Dependencies were not installed and database/admin scripts were not executed."
+  ]
+}

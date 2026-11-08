@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #f7f4ee;
+  color: #1a1512;
+  font-family: var(--font-sans), Jost, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #9a5b32;
+  color: #f7f4ee;
+}
+
+:focus-visible {
+  outline: 2px solid #9a5b32;
+  outline-offset: 3px;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* ============================================================
+   Film grain — sitewide. This is what stops the CGI render
+   (and the flat Tailwind fills) from reading as "cartoon".
+   ============================================================ */
+body::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 6s steps(6) infinite;
+}
+@keyframes grain {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-6%, 4%); }
+  40%  { transform: translate(4%, -6%); }
+  60%  { transform: translate(-4%, 6%); }
+  80%  { transform: translate(6%, -4%); }
+  100% { transform: translate(0, 0); }
+}
+
+@layer utilities {
+  .eyebrow {
+    font-size: 0.66rem;
+    font-weight: 400;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+  }
+  .rule::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    margin-right: 1.1em;
+    vertical-align: middle;
+    background: currentColor;
+    opacity: 0.55;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* clip container for line-by-line type reveals */
+  .clip {
+    overflow: hidden;
+    display: block;
+  }
+}
+
+/* ============================================================
+   Page-load curtain — brief branded intro, pure CSS so it
+   can never get stuck if JS fails.
+   ============================================================ */
+.curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: grid;
+  place-items: center;
+  background: #f7f4ee;
+  animation: curtain-out 0.9s cubic-bezier(0.76, 0, 0.24, 1) 1s forwards;
+}
+.curtain__mark {
+  font-family: var(--font-display), "Bodoni Moda", serif;
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  letter-spacing: 0.3em;
+  color: #1a1512;
+  opacity: 0;
+  animation: curtain-mark 0.7s ease forwards;
+}
+.curtain__bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #9a5b32;
+  animation: curtain-bar 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+@keyframes curtain-mark {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes curtain-bar {
+  to { width: 100%; }
+}
+@keyframes curtain-out {
+  to { transform: translateY(-100%); visibility: hidden; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+  body::after { animation: none; }
+  .curtain { display: none; }
+}
+
+/* ============================================================
+   Hero — Ken Burns + editorial photo treatment
+   ============================================================ */
+.hero-kb {
+  animation: kenburns 26s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+  transform-origin: 38% 46%;
+}
+/* portrait crop on phones — drift from the centre so nothing important leaves frame */
+@media (max-width: 640px) {
+  .hero-kb {
+    transform-origin: 50% 40%;
+    animation-name: kenburns-m;
+  }
+}
+@keyframes kenburns {
+  from { transform: scale(1.02) translate3d(0, 0, 0); }
+  to   { transform: scale(1.11) translate3d(-1.5%, -1.5%, 0); }
+}
+@keyframes kenburns-m {
+  from { transform: scale(1.03) translate3d(0, 0, 0); }
+  to   { transform: scale(1.1) translate3d(0, -1.4%, 0); }
+}
+/* natural lens falloff — makes a render read as a photo */
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 90% at 50% 42%,
+    transparent 45%,
+    rgba(26, 21, 18, 0.28) 100%
+  );
+}
+/* whisper-warm grade, blended so it never darkens */
+.hero-grade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 236, 210, 0.22) 0%,
+    rgba(154, 91, 50, 0.10) 55%,
+    rgba(26, 21, 18, 0.18) 100%
+  );
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-kb { animation: none; transform: scale(1.02); }
+}
+
+/* ============================================================
+   Admin panel — scoped under .adm
+   ============================================================ */
+.adm {
+  --adm-bg: #f4f1ea;
+  --adm-surface: #ffffff;
+  --adm-border: rgba(26, 21, 18, 0.09);
+  --adm-border-strong: rgba(26, 21, 18, 0.16);
+  --adm-text: #1a1512;
+  --adm-muted: rgba(26, 21, 18, 0.55);
+  --adm-faint: rgba(26, 21, 18, 0.38);
+  --adm-accent: #9a5b32;
+  background: var(--adm-bg);
+  color: var(--adm-text);
+  font-family: var(--font-sans), Jost, system-ui, sans-serif;
+}
+.adm ::selection { background: #9a5b32; color: #fff; }
+.adm-card {
+  background: var(--adm-surface);
+  border: 1px solid var(--adm-border);
+  border-radius: 14px;
+}
+.adm-shadow { box-shadow: 0 1px 2px rgba(26,21,18,0.04), 0 8px 24px -12px rgba(26,21,18,0.12); }
+.adm-scroll::-webkit-scrollbar { width: 8px; height: 8px; }
+.adm-scroll::-webkit-scrollbar-thumb { background: rgba(26,21,18,0.18); border-radius: 999px; }
+.adm-skel {
+  background: linear-gradient(90deg, rgba(26,21,18,0.05) 25%, rgba(26,21,18,0.09) 37%, rgba(26,21,18,0.05) 63%);
+  background-size: 400% 100%;
+  animation: adm-shimmer 1.4s ease infinite;
+  border-radius: 8px;
+}
+@keyframes adm-shimmer { 0% { background-position: 100% 0 } 100% { background-position: 0 0 } }
+.adm input, .adm textarea, .adm select {
+  font-family: inherit;
+}
