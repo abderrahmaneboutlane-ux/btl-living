@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Bodoni_Moda, Jost } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import { CartProvider } from "@/components/CartProvider";
@@ -12,19 +12,20 @@ import Curtain from "@/components/Curtain";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.btl-living.com";
 const PHONE = "+212708029551";
 
-const display = Bodoni_Moda({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
+const display = localFont({
+  src: [
+    { path: "./fonts/bodoni_moda-normal.woff2", weight: "400 600", style: "normal" },
+    { path: "./fonts/bodoni_moda-italic.woff2", weight: "400 600", style: "italic" },
+  ],
   variable: "--font-display",
   display: "swap",
   adjustFontFallback: false,
   fallback: ["Didot", "Playfair Display", "Georgia", "serif"],
 });
 
-const sans = Jost({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500"],
+const sans = localFont({
+  src: "./fonts/jost-normal.woff2",
+  weight: "200 500",
   variable: "--font-sans",
   display: "swap",
 });
