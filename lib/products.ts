@@ -39,11 +39,6 @@ export const CATEGORIES: Category[] = [
     blurb: "Tables, chaises et buffets pour recevoir et prolonger les repas.",
   },
   {
-    key: "salon",
-    label: "Salon",
-    blurb: "Assises, tables basses et meubles TV — le confort devient design.",
-  },
-  {
     key: "coiffeuse-decor",
     label: "Coiffeuse & décor",
     blurb: "Coiffeuses, miroirs et pièces d'appoint qui signent une pièce.",
@@ -203,45 +198,6 @@ export const PRODUCTS: Product[] = [
     finition: "Huile naturelle mate · pierre non traitée",
     dimensions: "180 × 45 × 85 (H) cm",
     delai: "5 à 7 semaines",
-  },
-  {
-    slug: "fauteuil-essaouira",
-    name: "Fauteuil Essaouira",
-    category: "salon",
-    price: 4600,
-    tagline: "Coque enveloppante, lin lavé",
-    description:
-      "Une coque basse et enveloppante, mousse haute résilience, housse en lin lavé. Le fauteuil où l'on reste plus longtemps que prévu.",
-    matiere: "Lin lavé · hêtre",
-    finition: "Lin naturel",
-    dimensions: "78 × 82 × 71 (H) cm",
-    delai: "4 à 6 semaines",
-  },
-  {
-    slug: "table-basse-taghazout",
-    name: "Table basse Taghazout",
-    category: "salon",
-    price: 5400,
-    tagline: "Plateau travertin, socle noyer",
-    description:
-      "Un bloc de travertin non rebouché posé sur un socle bas en noyer. Massif, franc, il tient la pièce.",
-    matiere: "Travertin · noyer",
-    finition: "Pierre non traitée · huile mate",
-    dimensions: "110 × 60 × 34 (H) cm",
-    delai: "4 à 6 semaines",
-  },
-  {
-    slug: "meuble-tv-corniche",
-    name: "Meuble TV Corniche",
-    category: "salon",
-    price: 7900,
-    tagline: "Deux tiroirs, passages de câbles",
-    description:
-      "Long, bas, deux tiroirs à fermeture douce et passages de câbles discrets. Pensé pour disparaître sous l'écran.",
-    matiere: "Panneau plaqué noyer · piétement massif",
-    finition: "Huile naturelle mate",
-    dimensions: "180 × 40 × 45 (H) cm",
-    delai: "3 à 5 semaines",
   },
   {
     slug: "coiffeuse-menara",

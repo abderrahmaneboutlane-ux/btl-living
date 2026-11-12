@@ -38,7 +38,7 @@ interface Row {
 const BLANK: Row = {
   slug: "",
   name: "",
-  category_key: "salon",
+  category_key: "salle-a-manger",
   price: 0,
   price_from: false,
   stock: 0,

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     template: "%s · BTL LIVING",
   },
   description:
-    "BTL LIVING — maison marocaine de mobilier. Chambres à coucher, dressings sur mesure, salles à manger, salons et meubles de rangement dessinés comme une architecture et fabriqués pour durer. Showroom, conseil et livraison partout au Maroc.",
+    "BTL LIVING — maison marocaine de mobilier. Chambres à coucher, dressings sur mesure, salles à manger, coiffeuses et meubles de rangement dessinés comme une architecture et fabriqués pour durer. Showroom, conseil et livraison partout au Maroc.",
   applicationName: "BTL LIVING",
   authors: [{ name: "BTL LIVING" }],
   creator: "BTL LIVING",
@@ -50,7 +50,6 @@ export const metadata: Metadata = {
     "chambre à coucher Maroc",
     "dressing sur mesure Maroc",
     "salle à manger Maroc",
-    "salon Maroc",
     "meuble sur mesure Casablanca",
     "meuble Rabat",
     "meuble Marrakech",
@@ -68,7 +67,7 @@ export const metadata: Metadata = {
     siteName: "BTL LIVING",
     title: "BTL LIVING — Mobilier d'exception au Maroc",
     description:
-      "Maison marocaine de mobilier. Chambres, dressings, salles à manger et salons — pensés, dessinés, fabriqués pour durer.",
+      "Maison marocaine de mobilier. Chambres, dressings, salles à manger et coiffeuses — pensés, dessinés, fabriqués pour durer.",
     images: [
       {
         url: "/og.jpg",
@@ -113,7 +112,7 @@ const jsonLd = {
   "@type": "FurnitureStore",
   name: "BTL LIVING",
   description:
-    "Maison marocaine de mobilier : chambres, dressings sur mesure, salles à manger, salons et rangements.",
+    "Maison marocaine de mobilier : chambres, dressings sur mesure, salles à manger, coiffeuses et rangements.",
   url: SITE_URL,
   image: `${SITE_URL}/showroom.jpg`,
   logo: `${SITE_URL}/showroom.jpg`,

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-const CATS = ["Chambre", "Dressing", "Salle à manger", "Salon", "Sur mesure"];
+const CATS = ["Chambre", "Dressing", "Salle à manger", "Sur mesure"];
 
 export default function Hero() {
   const root = useRef<HTMLElement>(null);
@@ -129,7 +129,7 @@ export default function Hero() {
             </span>
             <span className="sr-only">
               {" "}— BTL LIVING, maison marocaine de mobilier d&apos;exception :
-              chambres, dressings sur mesure, salles à manger et salons. Showroom
+              chambres, dressings sur mesure, salles à manger et coiffeuses. Showroom
               à Casablanca, livraison partout au Maroc.
             </span>
           </h1>
@@ -139,7 +139,7 @@ export default function Hero() {
             className="mt-6 max-w-[32ch] text-[0.9rem] font-light leading-relaxed text-porcelain/90 sm:mt-7 sm:text-[0.95rem]"
             style={{ textShadow: "0 1px 14px rgba(24,19,16,0.9)" }}
           >
-            Chambres, dressings, salles à manger et salons — dessinés comme une
+            Chambres, dressings, salles à manger et coiffeuses — dessinés comme une
             architecture, fabriqués pour durer une vie.
           </p>
 

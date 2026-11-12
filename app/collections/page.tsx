@@ -12,11 +12,11 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Boutique — Mobilier BTL LIVING",
   description:
-    "Toute la collection BTL LIVING : chambre, dressing, salle à manger, salon, coiffeuse et décor. Prix en MAD, livraison et montage partout au Maroc.",
+    "Toute la collection BTL LIVING : chambre, dressing, salle à manger, coiffeuse et décor. Prix en MAD, livraison et montage partout au Maroc.",
   alternates: { canonical: "/collections" },
   openGraph: {
     title: "Boutique — BTL LIVING",
-    description: "Toute la collection : chambre, dressing, salle à manger, salon, décor.",
+    description: "Toute la collection : chambre, dressing, salle à manger, décor.",
     url: `${SITE_URL}/collections`,
   },
 };
@@ -27,7 +27,10 @@ export default async function BoutiquePage() {
     getAllProducts(),
   ]);
   const featured = products.filter((p) => p.badge === "Signature");
-  const firstOf = (key: string) => products.find((p) => p.category === key);
+  const firstOf = (key: string) =>
+    (key === "salle-a-manger"
+      ? products.find((p) => p.slug === "wa-20261110-table-rectangulaire-claire" && p.category === key)
+      : undefined) ?? products.find((p) => p.category === key);
 
   const itemListLd = {
     "@context": "https://schema.org",

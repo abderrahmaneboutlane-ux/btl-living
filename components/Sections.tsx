@@ -50,14 +50,13 @@ export function Marquee() {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Univers — five crops of the same showroom render                   */
+/*  Univers — catalogue photography by collection                   */
 /* ------------------------------------------------------------------ */
 const UNIVERS = [
-  { name: "Chambre", href: "/collections/chambre", note: "Lits, têtes de lit, chevets, commodes", pos: "6% 52%", span: "lg:col-span-7" },
-  { name: "Dressing", href: "/collections/dressing", note: "Penderies, verrières, rangements éclairés", pos: "70% 40%", span: "lg:col-span-5" },
-  { name: "Salle à manger", href: "/collections/salle-a-manger", note: "Tables, chaises, buffets", pos: "62% 82%", span: "lg:col-span-5" },
-  { name: "Salon", href: "/collections/salon", note: "Assises, tables, meubles TV", pos: "40% 90%", span: "lg:col-span-4" },
-  { name: "Coiffeuse & décor", href: "/collections/coiffeuse-decor", note: "Miroirs, consoles, objets", pos: "50% 36%", span: "lg:col-span-3" },
+  { name: "Chambre", href: "/collections/chambre", note: "Lits, têtes de lit, chevets, commodes", image: "/products/whatsapp-20261110/wa-20261110-lit-1-032139650d-4k.webp", alt: "Lit et tête de lit dans une chambre aux tons bois", pos: "50% 58%", span: "lg:col-span-7" },
+  { name: "Dressing", href: "/collections/dressing", note: "Penderies, verrières, rangements éclairés", image: "/products/whatsapp-20261110/wa-20261110-dressing-fonce-1-8122545804-4k.webp", alt: "Dressing coulissant en bois foncé", pos: "25% 50%", span: "lg:col-span-5" },
+  { name: "Salle à manger", href: "/collections/salle-a-manger", note: "Tables, chaises, buffets", image: "/products/whatsapp-20261110/wa-20261110-table-rectangulaire-claire-1-8f5b6ea9b6-4k.webp", alt: "Table rectangulaire et chaises en bois clair", pos: "50% 53%", span: "lg:col-span-7" },
+  { name: "Coiffeuse & décor", href: "/collections/coiffeuse-decor", note: "Miroirs, consoles, objets", image: "/products/whatsapp-20261110/wa-20261110-coiffeuse-ronde-1-2f39b4a5a1-4k.webp", alt: "Coiffeuse avec miroir rond éclairé", pos: "50% 49%", span: "lg:col-span-5" },
 ];
 
 export function Univers() {
@@ -96,14 +95,14 @@ export function Univers() {
               className={`group relative block h-[clamp(240px,32vw,420px)] overflow-hidden bg-espresso ${u.span}`}
             >
               <Image
-                src="/showroom.jpg"
-                alt={`${u.name} — BTL LIVING`}
+                src={u.image}
+                alt={u.alt}
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 767px) 88vw, (max-width: 1023px) 44vw, 52vw"
                 style={{ objectPosition: u.pos }}
-                className="object-cover transition-transform duration-[1400ms] ease-luxe group-hover:scale-[1.07]"
+                className="object-cover transition-transform duration-[1400ms] ease-luxe group-hover:scale-[1.035] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
               />
-              <span className="absolute inset-0 bg-gradient-to-t from-espresso/85 via-espresso/20 to-transparent transition-opacity duration-700 group-hover:from-espresso/70" />
+              <span className="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/10 to-transparent" />
               <span className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-7">
                 <span>
                   <span className="block font-display text-[1.6rem] leading-none text-porcelain">
@@ -506,8 +505,7 @@ export function Footer() {
               Living
             </span>
             <p className="mt-6 max-w-[30ch] text-[0.82rem] font-light leading-relaxed text-espresso/55">
-              Maison marocaine de mobilier. Chambres, dressings, salles à manger
-              et salons.
+              Maison marocaine de mobilier. Chambres, dressings, salles à manger et coiffeuses.
             </p>
             <NewsletterForm />
           </div>
