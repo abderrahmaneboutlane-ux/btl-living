@@ -6,7 +6,7 @@ import Reveal from "@/components/Reveal";
 import { getCategories, getCategory, getProductsByCategory } from "@/lib/catalog";
 import { SITE_URL } from "@/lib/site";
 
-export const revalidate = 3600; // re-pull the catalogue hourly
+export const revalidate = 60;
 
 export async function generateStaticParams() {
   return (await getCategories()).map((c) => ({ category: c.key }));

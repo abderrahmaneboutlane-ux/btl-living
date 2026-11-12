@@ -22,8 +22,9 @@ export default function ProductCard({
           alt={`${product.name} — ${product.tagline}`}
           fill
           priority={priority}
+          quality={85}
           sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
-          className="object-cover transition-transform duration-[1200ms] ease-luxe group-hover:scale-[1.06]"
+          className="object-contain"
         />
         {product.badge && (
           <span className="absolute left-4 top-4 bg-espresso/90 px-3 py-1.5 text-[0.55rem] font-light uppercase tracking-wide2 text-porcelain">
@@ -42,7 +43,7 @@ export default function ProductCard({
         <h3 className="font-display text-[1.3rem] leading-tight">{product.name}</h3>
         <span className="whitespace-nowrap text-[0.82rem] font-light text-espresso/70 tabular-nums">
           {product.priceFrom ? "dès " : ""}
-          {formatMAD(product.price)}
+          {product.price > 0 ? formatMAD(product.price) : "Prix à renseigner"}
         </span>
       </div>
       <p className="mt-1 text-[0.72rem] font-light uppercase tracking-wide2 text-espresso/40">

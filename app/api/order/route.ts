@@ -49,12 +49,32 @@ export async function POST(req: Request) {
       price_from: Boolean(i.priceFrom),
     }));
 
+  if (clean.length !== items.length) {
+    return NextResponse.json({ error: "invalid items" }, { status: 400 });
+  }
+  const sb = supabaseAdmin();
+  if (!sb) return NextResponse.json({ ok: true, ref: null, persisted: false });
+
+  const { data: products, error: lookupError } = await sb
+    .from("products")
+    .select("slug,name,price,price_from")
+    .in("slug", [...new Set(clean.map((item) => item.slug))]);
+  if (lookupError || !products) {
+    return NextResponse.json({ error: "catalogue unavailable" }, { status: 503 });
+  }
+  const catalogue = new Map(products.map((product) => [product.slug, product]));
+  for (const item of clean) {
+    const product = catalogue.get(item.slug);
+    if (!product || product.price <= 0) {
+      return NextResponse.json({ error: "product price unavailable" }, { status: 400 });
+    }
+    item.name = product.name;
+    item.unit_price = product.price;
+    item.price_from = product.price_from;
+  }
+
   const subtotal = clean.reduce((s, i) => s + i.unit_price * i.qty, 0);
   const isEstimate = clean.some((i) => i.price_from);
-
-  const sb = supabaseAdmin();
-  // Supabase not configured yet — accept silently so checkout still works.
-  if (!sb) return NextResponse.json({ ok: true, ref: null, persisted: false });
 
   const { data: order, error: orderErr } = await sb
     .from("orders")

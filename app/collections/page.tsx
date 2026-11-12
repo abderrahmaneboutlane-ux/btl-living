@@ -7,7 +7,7 @@ import { getAllProducts, getCategories } from "@/lib/catalog";
 import { imageFor } from "@/lib/products";
 import { SITE_URL } from "@/lib/site";
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Boutique — Mobilier BTL LIVING",

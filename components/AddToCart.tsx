@@ -12,6 +12,7 @@ export default function AddToCart({ product }: { product: Product }) {
   const [added, setAdded] = useState(false);
 
   const doAdd = () => {
+    if (product.price <= 0) return;
     add(
       {
         slug: product.slug,
@@ -28,6 +29,8 @@ export default function AddToCart({ product }: { product: Product }) {
   const waMsg = `Bonjour BTL LIVING, je suis intéressé(e) par « ${product.name} »${
     qty > 1 ? ` (×${qty})` : ""
   }. Réf. ${product.slug}. Pouvez-vous me renseigner ?`;
+
+  if (product.price <= 0) return <p className="mt-8 text-sm text-espresso/60">Fiche en préparation · Prix et informations à compléter.</p>;
 
   return (
     <div className="mt-8">

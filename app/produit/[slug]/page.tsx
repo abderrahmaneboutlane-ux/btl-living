@@ -32,7 +32,7 @@ export async function generateMetadata({
     title,
     description: `${p.name} : ${p.description} ${
       p.priceFrom ? "À partir de " : ""
-    }${formatMAD(p.price)}. Livraison et montage au Maroc.`,
+    }${p.price > 0 ? formatMAD(p.price) : "Prix à renseigner"}. Livraison et montage au Maroc.`,
     alternates: { canonical: `/produit/${p.slug}` },
     openGraph: {
       title: `${p.name} — BTL LIVING`,
@@ -66,7 +66,7 @@ export default async function ProductPage({
     brand: { "@type": "Brand", name: "BTL LIVING" },
     category: catLabel,
     material: p.matiere,
-    offers: {
+    offers: p.price > 0 ? {
       "@type": "Offer",
       priceCurrency: "MAD",
       price: p.price,
@@ -91,7 +91,7 @@ export default async function ProductPage({
         returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
         merchantReturnDays: 0,
       },
-    },
+    } : undefined,
   };
 
   const breadcrumbLd = {
@@ -166,7 +166,7 @@ export default async function ProductPage({
                   à partir de
                 </span>
               )}
-              {formatMAD(p.price)}
+              {p.price > 0 ? formatMAD(p.price) : "Prix à renseigner"}
             </p>
             <p className="mt-1 text-[0.7rem] font-light uppercase tracking-wide2 text-espresso/40">
               Livraison & montage inclus · paiement à la livraison

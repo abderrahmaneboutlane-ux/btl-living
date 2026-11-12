@@ -13,11 +13,12 @@ export default function ProductGallery({
   badge?: string;
 }) {
   const [active, setActive] = useState(0);
+  const [ratios, setRatios] = useState<Record<string, number>>({});
   const imgs = images.length ? images : [];
 
   return (
     <div>
-      <div className="relative aspect-[4/5] overflow-hidden bg-plaster">
+      <div className="relative overflow-hidden bg-plaster" style={{ aspectRatio: ratios[imgs[active]] || 4 / 5 }}>
         {imgs[active] && (
           <Image
             key={imgs[active]}
@@ -25,8 +26,16 @@ export default function ProductGallery({
             alt={alt}
             fill
             priority
+            quality={90}
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            className="object-contain"
+            onLoad={(event) => {
+              const image = event.currentTarget;
+              if (image.naturalWidth && image.naturalHeight) {
+                const ratio = image.naturalWidth / image.naturalHeight;
+                setRatios(previous => previous[imgs[active]] === ratio ? previous : { ...previous, [imgs[active]]: ratio });
+              }
+            }}
           />
         )}
         {badge && (
@@ -35,6 +44,8 @@ export default function ProductGallery({
           </span>
         )}
       </div>
+
+      {imgs[active] && <a href={imgs[active]} target="_blank" rel="noreferrer" className="mt-3 inline-block text-xs text-cognac underline underline-offset-4">Ouvrir la photo en grand</a>}
 
       {imgs.length > 1 && (
         <div className="mt-4 grid grid-cols-3 gap-3">
@@ -56,7 +67,7 @@ export default function ProductGallery({
                 alt=""
                 fill
                 sizes="140px"
-                className="object-cover"
+                className="object-contain"
               />
             </button>
           ))}
